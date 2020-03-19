@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/img_main_bg_1"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:contentInsetLeft="@dimen/activity_horizontal_margin"
+        app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="聆听音乐"
+            android:textColor="@color/common_black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_clear_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:foreground="@drawable/bg_white"
+            android:layout_marginRight="@dimen/dp_16"
+            android:padding="@dimen/dp_15"
+            android:text="清空"
+            android:textColor="@color/common_black" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+
+        android:id="@+id/scan_lay"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/img_scan_logo" />
+
+        <Button
+            android:id="@+id/btn_scan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:background="@drawable/selector_scan_btn"
+            android:text="开始扫描"
+            android:textColor="#FFF"
+            android:textSize="22sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/play_state_lay"
+            android:layout_marginTop="@dimen/dp_1"
+            android:gravity="center"
+            android:background="@color/half_transparent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/play_state_img"
+                android:background="@mipmap/list_pause_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:gravity="center"
+                android:text="歌曲信息"
+                android:ellipsize="marquee"
+                android:focusableInTouchMode="true"
+                android:focusable="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:id="@+id/tv_play_song_info"
+                android:orientation="vertical"
+                android:layout_width="@dimen/dp_150"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_music"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/dp_4"
+            android:orientation="vertical"
+            android:background="@color/half_transparent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_play_time"
+                    android:text="00:00"
+                    android:layout_marginLeft="@dimen/dp_4"
+                    android:textSize="@dimen/sp_14"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <SeekBar
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:id="@+id/time_seekBar"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:max="100"
+                    android:maxHeight="2dp"
+                    android:minHeight="2dp"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/seekbar_style"
+                    android:thumb="@drawable/thumb" />
+
+                <TextView
+                    android:id="@+id/tv_total_time"
+                    android:layout_marginRight="@dimen/dp_4"
+                    android:text="00:00"
+                    android:textSize="@dimen/sp_14"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout
+                android:padding="@dimen/dp_10"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/song_image"
+                    android:visibility="gone"
+                    android:background="@mipmap/icon_music_gray"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"/>
+
+                <ImageView
+                    android:id="@+id/btn_previous"
+                    android:background="@mipmap/icon_previous"
+                    android:layout_width="@dimen/dp_40"
+                    android:layout_height="@dimen/dp_40" />
+                <ImageView
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:layout_marginRight="@dimen/dp_20"
+                    android:id="@+id/btn_play_or_pause"
+                    android:background="@mipmap/icon_pause"
+                    android:layout_width="@dimen/dp_44"
+                    android:layout_height="@dimen/dp_44" />
+                <ImageView
+                    android:id="@+id/btn_next"
+                    android:background="@mipmap/icon_next"
+                    android:layout_width="@dimen/dp_40"
+                    android:layout_height="@dimen/dp_40"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

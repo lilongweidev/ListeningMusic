@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="statusbar_color">#3B5677</color>
+
+    <color name="float_transparent">#00000000</color>
+    <color name="sweet_dialog_bg_color">#FFFFFF</color>
+    <color name="button_text_color">#FFFFFF</color>
+    <color name="gray_btn_bg_color">#D0D0D0</color>
+    <color name="gray_btn_bg_pressed_color">#B6B6B6</color>
+    <color name="blue_btn_bg_color">#AEDEF4</color>
+    <color name="blue_btn_bg_pressed_color">#96BFD2</color>
+    <color name="red_btn_bg_color">#DD6B55</color>
+    <color name="red_btn_bg_pressed_color">#CD5B55</color>
+    <color name="error_stroke_color">#F27474</color>
+    <color name="success_stroke_color">#A5DC86</color>
+    <color name="trans_success_stroke_color">#33A5DC86</color>
+    <color name="warning_stroke_color">#F8BB86</color>
+    <color name="text_color">#575757</color>
+
+    <color name="material_blue_grey_80">#ff37474f</color>
+    <color name="material_blue_grey_90">#ff263238</color>
+    <color name="material_blue_grey_95">#ff21272b</color>
+    <color name="material_deep_teal_20">#ff80cbc4</color>
+    <color name="material_deep_teal_50">#ff009688</color>
+
+    <color name="common_main">#3B5677</color>
+
+    <color name="mask_color">#99e5eaee</color>
+
+    <color name="common_white">#FFFFFFFF</color>
+    <color name="common_black">#FF000000</color>
+    <color name="edit_hint_color">#969FB0</color>
+    <color name="common_text_hint">#FFA0A0A0</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="mall_font_gray">#676767</color>
+    <color name="red">#FF0000</color>
+    <color name="goods_info_gray">#ACACAC</color>
+    <color name="gray_text_tip">#BEBEBE</color>
+    <color name="blue_drak">#19304E</color>
+
+    <color name="default_bg">#3b5677</color>
+
+    <color name="indigo_blue">#457090</color>
+    <color name="indigo_blue_dark">#35546B</color>
+    <!--白色-->
+    <color name="color_white">#FFFFFF</color>
+    <!--白色-->
+    <color name="color_light_gray">#DDDDDD</color>
+    <!--黑色半透明-->
+    <color name="color_dark_transparent">#88333333</color>
+    <!--全透明-->
+    <color name="color_transparent">#00000000</color>
+    <color name="color_transparent_20">#33000000</color>
+    <color name="color_transparent_10">#1F000000</color>
+    <color name="half_transparent">#3f000000</color>
+    <!--橙色-->
+    <color name="color_orange">#f59405</color>
+    <!--橘红色-->
+    <color name="color_red">#f44022</color>
+
+    <color name="bg_gray">#F5F5F5</color>
+    <color name="line_gray2">#EEEEEE</color>
+    <color name="yellow">#F5A623</color>
+    <color name="yellow_buy">#FF8C00</color>
+    <color name="white">#FFFFFF</color>
+    <color name="alpha_9">#e6000000</color>
+
+    <color name="create_account_gray">#F2F2F2</color>
+    <color name="gray">#ababab</color>
+    <color name="green">#37A118</color>
+    <color name="second_bg">#F6F6F6</color>
+    <color name="public_text_38">#242424</color>
+    <color name="public_bg">#F8F8F8</color>
+    <color name="public_line">#C8C8CC</color>
+    <color name="friend">#666666</color>
+
+    <color name="line">#8A8A8A</color>
+    <color name="greens">#1EC292</color>
+    <color name="reds">#F2635B</color>
+    <color name="grays">#F7F7F7</color>
+    <color name="grays_dark">#E9EAEB</color>
+
+    <color name="mall_gray_bg">#F2F2F2</color>
+    <color name="line_gray">#F0F0F0</color>
+    <color name="line_color">#CFD9DE</color>
+    <color name="ed_gray">#B1B1B1</color>
+    <color name="all_color">#2F3239</color>
+    <color name="all_color2">#363940</color>
+    <color name="normal_data_color">#8A96A3</color>
+    <color name="blue">#44AAFF</color>
+    <color name="green_buy_request_checked">#77d034</color>
+    <color name="blue_dark">#677E9C</color>
+    <color name="blue_title_bottom">#E5E6F1</color>
+    <color name="dark_blue">#2A9FFE</color>
+    <color name="onclick_blue">#0975E1</color>
+    <color name="default_white_bg">#FDFDFD</color>
+    <color name="modify_gray">#C9C9C9</color>
+    <color name="update_nickname_gray">#DBDBDB</color>
+    <color name="update_nickname_line">#A8A8A8</color>
+    <color name="is_real_gray">#C1C1C1</color>
+    <color name="deal_detail_gray">#7D7D7D</color>
+    <color name="btn_out_gray">#EBEBEB</color>
+    <color name="blue_two">#0084BC</color>
+    <color name="team_performance_gray">#BCBCBC</color>
+    <color name="real_name_gray">#C4C4C4</color>
+    <color name="add_bank_card_gray">#AEAEAE</color>
+    <color name="gray_asset">#7F8592</color>
+    <color name="gray_asset2">#535353</color>
+
+    <color name="text_gray">#A0A0A0</color>
+
+    <color name="black">#000000</color>
+    <color name="trans_white">#afffffff</color>
+    <color name="divider_color">#6fffffff</color>
+    <color name="bottom_color">#00000000</color>
+    <color name="top_color">#01589e</color>
+
+    <color name="holo_blue_light">#ff33b5e5</color>
+    <color name="holo_blue_light2">#aa33b5e5</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="grey_white">#fff0f0f0</color>
+    <color name="grey_dark_light">#55666666</color>
+    <color name="grey_dark">#ff454545</color>
+    <color name="holo_blue_dark">#ff0099cc</color>
+    <color name="holo_orange_dark">#ffff8800</color>
+    <color name="dialog_text_hint">#ffb0b0b0</color>
+
+</resources>

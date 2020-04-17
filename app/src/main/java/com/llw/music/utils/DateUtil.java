@@ -7,6 +7,9 @@ import java.util.Date;
 import java.util.Formatter;
 import java.util.Locale;
 
+/**
+ * 时间转换工具类
+ */
 public class DateUtil {
     //获取当前完整的日期和时间
     public static String getNowDateTime(){

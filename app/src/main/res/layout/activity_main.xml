@@ -8,7 +8,7 @@
     android:fitsSystemWindows="true"
     android:orientation="vertical"
     tools:context=".MainActivity">
-
+    <!--Toolbar-->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -38,21 +38,18 @@
             android:text="清空"
             android:textColor="@color/common_black" />
     </androidx.appcompat.widget.Toolbar>
-
+    <!--扫描歌曲的布局-->
     <LinearLayout
-
         android:id="@+id/scan_lay"
         android:background="@color/white"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
         android:orientation="vertical">
-
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@mipmap/img_scan_logo" />
-
         <Button
             android:id="@+id/btn_scan"
             android:layout_width="wrap_content"
@@ -63,11 +60,12 @@
             android:textColor="#FFF"
             android:textSize="22sp" />
     </LinearLayout>
-
+    <!--扫描之后，歌曲的展示和播放布局-->
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+        <!--播放歌曲时，显示你播放的是哪一首歌，跑马灯效果-->
         <LinearLayout
             android:visibility="gone"
             android:id="@+id/play_state_lay"
@@ -96,13 +94,13 @@
                 android:layout_width="@dimen/dp_150"
                 android:layout_height="wrap_content"/>
         </LinearLayout>
-
+        <!--歌曲的展示列表,都什么年代了，你还在用ListView吗？-->
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_music"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"/>
-
+        <!--底部歌曲播放控制布局-->
         <LinearLayout
             android:layout_marginTop="@dimen/dp_4"
             android:orientation="vertical"
@@ -115,6 +113,7 @@
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+                <!--播放时间-->
                 <TextView
                     android:id="@+id/tv_play_time"
                     android:text="00:00"
@@ -123,7 +122,7 @@
                     android:textColor="@color/white"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-
+                <!--歌曲播放进度条 ，样式是自定义，因为原生的太丑了-->
                 <SeekBar
                     android:layout_marginLeft="@dimen/dp_10"
                     android:layout_marginRight="@dimen/dp_10"
@@ -137,7 +136,7 @@
                     android:progress="0"
                     android:progressDrawable="@drawable/seekbar_style"
                     android:thumb="@drawable/thumb" />
-
+                <!--总时间-->
                 <TextView
                     android:id="@+id/tv_total_time"
                     android:layout_marginRight="@dimen/dp_4"
@@ -153,19 +152,13 @@
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-                <de.hdodenhof.circleimageview.CircleImageView
-                    xmlns:app="http://schemas.android.com/apk/res-auto"
-                    android:id="@+id/song_image"
-                    android:visibility="gone"
-                    android:background="@mipmap/icon_music_gray"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"/>
-
+                <!--上一曲-->
                 <ImageView
                     android:id="@+id/btn_previous"
                     android:background="@mipmap/icon_previous"
                     android:layout_width="@dimen/dp_40"
                     android:layout_height="@dimen/dp_40" />
+                <!--播放或暂停-->
                 <ImageView
                     android:layout_marginLeft="@dimen/dp_20"
                     android:layout_marginRight="@dimen/dp_20"
@@ -173,6 +166,7 @@
                     android:background="@mipmap/icon_pause"
                     android:layout_width="@dimen/dp_44"
                     android:layout_height="@dimen/dp_44" />
+                <!--下一曲-->
                 <ImageView
                     android:id="@+id/btn_next"
                     android:background="@mipmap/icon_next"
@@ -181,6 +175,5 @@
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
-
 
 </LinearLayout>

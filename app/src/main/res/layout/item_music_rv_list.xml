@@ -13,12 +13,6 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <View
-            android:visibility="gone"
-            android:id="@+id/view"
-            android:background="@color/greens"
-            android:layout_width="@dimen/dp_5"
-            android:layout_height="match_parent"/>
 
         <LinearLayout
             android:gravity="center_vertical"

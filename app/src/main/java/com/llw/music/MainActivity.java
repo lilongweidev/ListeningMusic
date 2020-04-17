@@ -33,11 +33,9 @@ import com.tbruyelle.rxpermissions2.RxPermissions;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import de.hdodenhof.circleimageview.CircleImageView;
 
 import static com.llw.music.utils.DateUtil.parseTime;
 
@@ -69,8 +67,6 @@ public class MainActivity extends AppCompatActivity implements MediaPlayer.OnCom
     ImageView btnNext;
     @BindView(R.id.tv_play_song_info)
     TextView tvPlaySongInfo;
-    @BindView(R.id.song_image)
-    CircleImageView songImage;
     @BindView(R.id.play_state_img)
     ImageView playStateImg;
     @BindView(R.id.play_state_lay)
@@ -108,6 +104,7 @@ public class MainActivity extends AppCompatActivity implements MediaPlayer.OnCom
         timeSeekBar.setOnSeekBarChangeListener(seekBarChangeListener);//滑动条监听
         musicData = SPUtils.getString(Constant.MUSIC_DATA_FIRST, "yes", this);
 
+
         if (musicData.equals("no")) {//说明是第一次打开APP，未进行扫描
             scanLay.setVisibility(View.GONE);
             initMusic();
@@ -137,7 +134,7 @@ public class MainActivity extends AppCompatActivity implements MediaPlayer.OnCom
             scanLay.setVisibility(View.GONE);
             SPUtils.putString(Constant.MUSIC_DATA_FIRST, "no", this);
         }
-        mAdapter = new MusicListAdapter(R.layout.item_music_rv_list, mList, MainActivity.this);//指定适配器的布局和数据源
+        mAdapter = new MusicListAdapter(R.layout.item_music_rv_list, mList);//指定适配器的布局和数据源
         //线性布局管理器，可以设置横向还是纵向，RecyclerView默认是纵向的，所以不用处理,如果不需要设置方向，代码还可以更加的精简如下
         rvMusic.setLayoutManager(new LinearLayoutManager(this));
         //如果需要设置方向显示，则将下面代码注释去掉即可
@@ -190,6 +187,7 @@ public class MainActivity extends AppCompatActivity implements MediaPlayer.OnCom
                 tvClearList.setTextColor(getResources().getColor(R.color.black));
                 if (mediaPlayer == null) {
                     mediaPlayer = new MediaPlayer();
+                    mediaPlayer.setOnCompletionListener(this);//监听音乐播放完毕事件，自动下一曲
                 }
                 if (mediaPlayer.isPlaying()) {
                     mediaPlayer.pause();
@@ -240,6 +238,7 @@ public class MainActivity extends AppCompatActivity implements MediaPlayer.OnCom
         Log.e("MainActivity", "position:" + position);
         if (mediaPlayer == null) {
             mediaPlayer = new MediaPlayer();
+            mediaPlayer.setOnCompletionListener(this);//监听音乐播放完毕事件，自动下一曲
         }
 
         try {

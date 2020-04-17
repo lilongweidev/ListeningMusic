@@ -40,6 +40,7 @@
     </androidx.appcompat.widget.Toolbar>
     <!--扫描歌曲的布局-->
     <LinearLayout
+        android:visibility="gone"
         android:id="@+id/scan_lay"
         android:background="@color/white"
         android:layout_width="match_parent"
@@ -146,32 +147,55 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
             </LinearLayout>
+
+
             <LinearLayout
-                android:padding="@dimen/dp_10"
                 android:gravity="center"
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <!--上一曲-->
-                <ImageView
-                    android:id="@+id/btn_previous"
-                    android:background="@mipmap/icon_previous"
-                    android:layout_width="@dimen/dp_40"
-                    android:layout_height="@dimen/dp_40" />
-                <!--播放或暂停-->
-                <ImageView
-                    android:layout_marginLeft="@dimen/dp_20"
-                    android:layout_marginRight="@dimen/dp_20"
-                    android:id="@+id/btn_play_or_pause"
-                    android:background="@mipmap/icon_pause"
-                    android:layout_width="@dimen/dp_44"
-                    android:layout_height="@dimen/dp_44" />
-                <!--下一曲-->
-                <ImageView
-                    android:id="@+id/btn_next"
-                    android:background="@mipmap/icon_next"
-                    android:layout_width="@dimen/dp_40"
-                    android:layout_height="@dimen/dp_40"/>
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <ImageView
+                        android:id="@+id/btn_play_mode"
+                        android:layout_width="@dimen/dp_40"
+                        android:layout_height="@dimen/dp_40"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:padding="@dimen/dp_10"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <!--上一曲-->
+                    <ImageView
+                        android:id="@+id/btn_previous"
+                        android:background="@mipmap/icon_previous"
+                        android:layout_width="@dimen/dp_40"
+                        android:layout_height="@dimen/dp_40" />
+                    <!--播放或暂停-->
+                    <ImageView
+                        android:layout_marginLeft="@dimen/dp_20"
+                        android:layout_marginRight="@dimen/dp_20"
+                        android:id="@+id/btn_play_or_pause"
+                        android:background="@mipmap/icon_pause"
+                        android:layout_width="@dimen/dp_44"
+                        android:layout_height="@dimen/dp_44" />
+                    <!--下一曲-->
+                    <ImageView
+                        android:id="@+id/btn_next"
+                        android:background="@mipmap/icon_next"
+                        android:layout_width="@dimen/dp_40"
+                        android:layout_height="@dimen/dp_40"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
